@@ -3,7 +3,7 @@ import TodoWrapper from "./TodosWrapper";
 function App() {
   return (
     <div>
-      {/* <Form /> */}
+      <Form />
       <TodoWrapper />
     </div>
   );
