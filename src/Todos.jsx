@@ -1,11 +1,5 @@
 import { useRef } from "react";
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from "react-query";
+import { useQuery, useMutation, useQueryClient } from "react-query";
 
 let todo = [
   { id: 1, title: "Do Laundry" },
@@ -29,17 +23,6 @@ function postTodo({ id, title }) {
 
 function deleteTodo(id) {
   todo = todo.filter((todo) => todo.id !== id);
-}
-// Create a client
-const queryClient = new QueryClient();
-
-function TodosWrapper() {
-  return (
-    // Provide the client to your App
-    <QueryClientProvider client={queryClient}>
-      <Todos />
-    </QueryClientProvider>
-  );
 }
 
 function Todos() {
@@ -99,4 +82,4 @@ function Todos() {
   );
 }
 
-export default TodosWrapper;
+export default Todos;
